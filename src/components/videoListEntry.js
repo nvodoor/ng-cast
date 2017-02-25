@@ -3,14 +3,15 @@ angular.module('video-player')
 
   return {
     scope: {
-      video: '<'
+      video: '<',
+      onClick: '<',
+      selectVideo: '<'
     },
-    // TODO
-    // controllerAs: 'props',
-    // bindToController: true,
-    // controller: function($scope) {
-    //   console.log($scope);
-    // }, 
+    controllerAs: 'ctrl',
+    bindToController: true,
+    controller: function($scope) {
+      console.log($scope);
+    },
 
     templateUrl: 'src/templates/videoListEntry.html'
   };
