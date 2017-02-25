@@ -1,6 +1,9 @@
 <div class="video-player">
-  <div class="embed-responsive embed-responsive-16by9">
+  <div ng-if='!!ctrl.video' class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="{{ctrl.video.id.videoId | trustAsResourceUrl}}" allowFullScreen></iframe>
+  </div>
+  <div ng-if='!ctrl.video'>
+    <h5>Please wait</h5>
   </div>
   <div class="video-player-details">
     <h3>{{ctrl.video.snippet.title}}</h3>
