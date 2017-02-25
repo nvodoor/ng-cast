@@ -1,10 +1,15 @@
 angular.module('video-player')
 
 .directive('videoPlayer', function() {
-  var videoString = 'https://www.youtube.com/embed/1w8Z0UOXVaY';
   return {
     scope: {
-      videoListForPlayer: '<',
+      video: '<',
+    },
+
+    controllerAs: 'ctrl',
+    bindToController: true,
+    controller: function($scope) {
+      console.log($scope);
     },
     templateUrl: 'src/templates/videoPlayer.html'
   };
