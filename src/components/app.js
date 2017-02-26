@@ -5,7 +5,6 @@ angular.module('video-player', [])
   this.searchResults = (data) => {
     this.videos = data;
     this.currentVideo = this.videos[0];
-    console.log(this);
   };
   this.selectVideo = (video) => {
     this.currentVideo = video;
@@ -24,6 +23,7 @@ angular.module('video-player', [])
 .directive('app', function() {
   return {
     scope: {},
+    restrict: 'E',
     controllerAs: 'ctrl',
     bindToController: true,
     controller: 'appController',

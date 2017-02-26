@@ -3,6 +3,7 @@ angular.module('video-player')
 .service('youTube', function($http, $window) {
   // TODO
   this.search = function(query, callback) {
+    debugger;
     $http.get('https://www.googleapis.com/youtube/v3/search', {
       params: {
         part: 'snippet',

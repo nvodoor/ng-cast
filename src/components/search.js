@@ -3,7 +3,6 @@ angular.module('video-player')
 .controller('SearchController', function() {
   this.handleClick = () => {
     this.service.search(this.input, (data) => {
-      console.log(data);
       this.result(data);
     });
   };
@@ -18,10 +17,9 @@ angular.module('video-player')
     },
 
     controllerAs: 'ctrl',
+    controller: 'SearchController', 
     bindToController: true,
-    controller: function($scope) {
-      console.log($scope);
-    },
+  
 
     templateUrl: 'src/templates/search.html'
   };
