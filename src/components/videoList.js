@@ -8,7 +8,6 @@ angular.module('video-player')
     scope: {
       videos: '<',
       onClick: '<',
-      selectVideo: '<'
     },
 
     controllerAs: 'ctrl',

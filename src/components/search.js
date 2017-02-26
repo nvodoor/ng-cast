@@ -1,10 +1,20 @@
 angular.module('video-player')
 
+.controller('SearchController', function() {
+  this.handleClick = () => {
+    this.service.search(this.input, (data) => {
+      console.log(data);
+      this.result(data);
+    });
+  };
+})
+
 .directive('search', function() {
   return {
     // TODO
     scope: {
-      selectVideo: '<'
+      service: '<',
+      result: '<'
     },
 
     controllerAs: 'ctrl',

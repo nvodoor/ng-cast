@@ -5,7 +5,6 @@ angular.module('video-player')
     scope: {
       video: '<',
       onClick: '<',
-      selectVideo: '<'
     },
     controllerAs: 'ctrl',
     bindToController: true,
